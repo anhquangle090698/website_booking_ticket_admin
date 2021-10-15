@@ -1,0 +1,33 @@
+@mixin styleText($color, $fs, $fw) {
+    color: $color;
+    font-size: $fs;
+    font-weight: $fw;
+}
+
+@mixin styleButton($bg-color, $b-radius, $pd-y, $pd-x) {
+    background: $bg-color;
+    border-radius: $b-radius;
+    padding: $pd-y $pd-x;
+}
+
+@mixin responsive-max-width($screen) {
+    @if (map-has-key($map:$breakpoints, $key:$screen )) {
+        $value : map-get($map:$breakpoints , $key:$screen ); // get size screen dựa vào name screen
+        @media screen and (max-width : $value) {
+            @content;
+        }
+    }@else {
+        @warn 'Screen is not exists';
+    }
+}
+
+@mixin responsive-min-width($screen) {
+    @if (map-has-key($map:$breakpoints, $key:$screen )) {
+        $value : map-get($map:$breakpoints , $key:$screen ); // get size screen dựa vào name screen
+        @media screen and (min-width : $value) {
+            @content;
+        }
+    }@else {
+        @warn 'Screen is not exists';
+    }
+}

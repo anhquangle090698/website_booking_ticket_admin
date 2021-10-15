@@ -1,8 +1,22 @@
 import { configureStore } from '@reduxjs/toolkit';
-import counterReducer from '../features/counter/counterSlice';
+import adminReducer from 'features/Admin/adminSlice';
+import loginReducer from 'features/Login/loginSlice';
+import manageMovieReducer from 'features/ManageMovie/manageMoviesSlice';
+import manageShowtimeReducer from 'features/ManageShowtime/manageShowtimeSlice';
+import manageUserReducer from 'features/ManageUser/manageUserSlice';
 
-export const store = configureStore({
-  reducer: {
-    counter: counterReducer,
-  },
+//Root reducer where contain all reducer of app, when create new reducer need sign up with root reducer.
+const rootReducer = {
+  login: loginReducer, //loginSlice
+  admin: adminReducer,
+  manageUser : manageUserReducer,
+  manageMovie : manageMovieReducer,
+  manageShowtime : manageShowtimeReducer
+};
+
+//configureStore is provided by Redux toolkit
+const store = configureStore({
+  reducer: rootReducer,
 });
+
+export default store;

@@ -1,0 +1,79 @@
+.sign {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  min-height: 100vh;
+  background: linear-gradient(to right top, #65dfc9, #6cdbeb);
+  &__main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 550px;
+    height: 450px;
+    background: linear-gradient(
+      to right bottom,
+      rgba(255, 255, 255, 0.7),
+      rgba(255, 255, 255, 0.3)
+    );
+    backdrop-filter: blur(2rem);
+    border-radius: 2rem;
+
+    z-index: 2;
+  }
+
+  &__circle1,
+  &__circle2 {
+    position: absolute;
+    z-index: 1;
+
+    width: 15rem;
+    height: 15rem;
+
+    background: linear-gradient(
+      to right bottom,
+      rgba(255, 255, 255, 0.8),
+      rgba(255, 255, 255, 0.3)
+    );
+    border-radius: 50%;
+  }
+
+  &__circle3,
+  &__circle4 {
+    position: absolute;
+    z-index: 1;
+
+    width: 15rem;
+    height: 15rem;
+
+    background: linear-gradient(to right bottom, rgba(#426696, 0.8), rgba(#658ec6, 0.6));
+    border-radius: 50%;
+  }
+
+  &__circle1 {
+    top: 16%;
+    right: 32%;
+  }
+
+  &__circle2 {
+    bottom: 16%;
+    left: 30%;
+  }
+
+  &__circle3 {
+    top: 10%;
+    left: 10%;
+  }
+
+  &__circle4 {
+    bottom: 16%;
+    right: 10%;
+  }
+
+  &__title {
+    @include styleText(#426696, $fs-30, $fw-700);
+    letter-spacing: 0.5px;
+  }
+}

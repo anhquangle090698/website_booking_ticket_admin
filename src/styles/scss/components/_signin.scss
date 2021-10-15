@@ -1,0 +1,83 @@
+.sign-in {
+  margin-top: $mg-20;
+
+  &__input-group {
+    margin: $mg-5 0;
+    
+    width: 300px;
+    height: 65px;
+  }
+
+  &__control {
+    width: 100%;
+
+    padding: $pd-10;
+
+    background: transparent;
+
+    border: none;
+    outline: none;
+    border-bottom: 1px solid $color-blue-3;
+
+    font-size: $fs-14;
+    color: $color-blue-3;
+
+    transition: all 0.3s ease;
+
+    &::placeholder {
+      @include styleText($color-blue-3, $fs-12 + 1, $fw-400);
+
+      letter-spacing: 0.2px;
+
+      transform: translateY(5px);
+      transition: transform 0.3s ease-in;
+    }
+
+    &:focus {
+      &::placeholder {
+        transform: translateY(-10px);
+
+        font-size: $fs-10 + 1;
+      }
+
+      border-bottom: 1px solid $color-blue-3;
+    }
+
+    &.invalid {
+      border-bottom: 1.5px solid $color-secondary-1;
+    }
+  }
+
+  &__error {
+    @include styleText($color-secondary-1, $fs-12, $fw-400);
+
+    margin-top: $mg-5;
+
+    text-align: left;
+  }
+
+  &__button {
+    @include styleText($color-white-0, $fs-12, $fw-700);
+    @include styleButton(
+      linear-gradient(to right, $color-blue-3, $color-blue-4),
+      10px,
+      $pd-15 - 2,
+      $pd-30
+    );
+
+    width: 100%;
+
+    outline: none;
+    border: none;
+
+    text-transform: uppercase;
+    letter-spacing: 1px;
+
+    cursor: pointer;
+    transition: transform 0.2s ease;
+
+    &:hover {
+      transform: scale(0.95);
+    }
+  }
+}

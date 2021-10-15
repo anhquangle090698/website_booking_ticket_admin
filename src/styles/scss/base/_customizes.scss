@@ -1,0 +1,99 @@
+//Customize th table (ant design)
+.ant-table-thead > tr > th {
+  @include styleText($color-blue-0, $fs-12 + 1, $fw-700);
+  letter-spacing: 0.1px;
+}
+
+.ant-modal-header {
+  border-bottom: 1px solid $color-gray-2;
+}
+
+//Customizes modal title (ant design)
+.ant-modal-title {
+  @include styleText($color-blue-0, $fs-14, $fw-700);
+  letter-spacing: 0.1px;
+}
+
+//Customizes label checkbox ant design
+.ant-form label {
+  font-size: $fs-12 + 1;
+  color: $color-black-2;
+}
+
+//Customizes label form ant design
+.ant-form-item-label > label {
+  font-size: $fs-12 + 1;
+  color: $color-blue-1;
+  letter-spacing: 0.2px;
+}
+
+//Customizes input ant design
+.ant-input {
+  padding: $pd-10 - 3 $pd-10 + 2;
+  
+  font-size: $fs-12;
+  color: $color-blue-0;
+}
+
+//Customizes value disable ant design
+.ant-input[disabled] {
+  color: rgba(0, 0, 0, 0.8);
+}
+
+//Customizes error input ant design
+.ant-form-item-explain.ant-form-item-explain-error {
+  font-size: $fs-12;
+}
+
+//Customizes title alert ant design
+.ant-alert {
+  font-size: $fs-12 + 1;
+}
+
+//Customizes ellipsis table ant design
+.ant-table-cell-ellipsis {
+  white-space: unset;
+}
+
+.ant-alert-message {
+  color: $color-blue-1;
+}
+
+//Customizes rate ant design
+.ant-rate {
+  font-size: $fs-16;
+}
+
+//Customizes date picker ant design
+.ant-picker-input > input {
+  font-size: $fs-12;
+}
+
+.ant-upload-list-picture .ant-upload-list-item-error, .ant-upload-list-picture-card .ant-upload-list-item-error {
+  border-color : $color-gray-2;
+}
+
+.ant-upload-list-item-error, .ant-upload-list-item-error .ant-upload-text-icon > .anticon, .ant-upload-list-item-error .ant-upload-list-item-name {
+  color: $color-blue-0;
+  font-size: $fs-12;
+}
+
+.ant-upload-list-item-error .ant-upload-list-item-card-actions .anticon {
+  color: $color-blue-0;
+}
+
+.ant-form-item-explain, .ant-form-item-extra {
+  margin-top: $mg-5 - 3;
+
+  font-size: $fs-10 + 1;
+  color: rgba($color: $color-black-1, $alpha: .8);
+}
+
+//Customizes scroll
+::-webkit-scrollbar-thumb {
+  background: $color-blue-1;
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+}

@@ -1,0 +1,2 @@
+export const ADMIN_LOGIN = 'ADMIN_LOGIN';
+export const ACCESS_TOKEN_ADMIN = 'ACCESS_TOKEN_ADMIN';

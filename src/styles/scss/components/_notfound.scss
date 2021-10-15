@@ -1,0 +1,167 @@
+.not-found {
+  position: relative;
+  left: -7vmin;
+  width: 100vw;
+  height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+
+  &__cog-wheel {
+    transform: scale(0.7);
+  }
+
+  &__cog1 {
+    position: relative;
+    top: 25vmin;
+    left: -12vmin;
+
+    width: 40vmin;
+    height: 40vmin;
+
+    border-radius: 50%;
+    border: 6vmin solid $color-primary;
+    animation: rotateCog 8s linear infinite;
+  }
+
+  &__cog2 {
+    position: relative;
+    left: 35vmin;
+    top: -25vmin;
+
+    width: 40vmin;
+    height: 40vmin;
+
+    border-radius: 50%;
+    border: 6vmin solid $color-green-0;
+    animation: rotateCog1 8s linear infinite;
+  }
+
+  &__top,
+  &__down,
+  &__left,
+  &__right,
+  &__left-top,
+  &__left-down,
+  &__right-top,
+  &__right-down {
+    position: absolute;
+
+    width: 10vmin;
+    height: 10vmin;
+    background-color: $color-primary;
+
+    &--green {
+      background-color: $color-green-0;
+    }
+  }
+
+  &__top {
+    top: -14vmin;
+    left: 9vmin;
+  }
+
+  &__down {
+    bottom: -14vmin;
+    left: 9vmin;
+  }
+
+  &__left {
+    left: -14vmin;
+    top: 9vmin;
+  }
+
+  &__right {
+    right: -14vmin;
+    top: 9vmin;
+  }
+
+  &__left-top {
+    transform: rotateZ(-45deg);
+    left: -8vmin;
+    top: -8vmin;
+  }
+
+  &__left-down {
+    transform: rotateZ(45deg);
+    left: -8vmin;
+    top: 25vmin;
+  }
+
+  &__right-top {
+    transform: rotateZ(45deg);
+    right: -8vmin;
+    top: -8vmin;
+  }
+
+  &__right-down {
+    transform: rotateZ(-45deg);
+    right: -8vmin;
+    top: 25vmin;
+  }
+
+  h1 {
+    color: #142833;
+  }
+
+  &__first-four {
+    position: relative;
+    left: 1vmin;
+    font-size: 40vmin;
+  }
+
+  &__second-four {
+    position: relative;
+    right: -15vmin;
+    z-index: -1;
+    font-size: 40vmin;
+  }
+
+  &__wrong {
+    font-family: 'Montserrat', sans-serif;
+    position: absolute;
+    bottom: 15vmin;
+
+    margin-left: 20vmin;
+
+    color: #092532;
+    font-weight: $fw-700;
+    font-size: 1.8vmin;
+
+    animation: opacityText 3s linear infinite;
+  }
+}
+
+@keyframes rotateCog {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rotateCog1 {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+
+@keyframes opacityText {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}

@@ -1,0 +1,76 @@
+.table-showtime {
+  &__group {
+    display: flex;
+
+    margin: $mg-30 0;
+  }
+
+  &__item {
+    margin-right: $mg-20;
+  }
+
+  &__title {
+    @include styleText($color-blue-1, $fs-12 + 1, $fw-700);
+    letter-spacing: 0.3px;
+
+    margin-bottom: $mg-5;
+  }
+
+  &__select {
+    font-size: $fs-12;
+  }
+
+  &__dropdown {
+    border-radius: 10px;
+  }
+
+  &__option {
+    font-size: $fs-12;
+    text-transform: capitalize;
+  }
+
+  &__icon {
+    margin-right: $mg-10;
+
+    font-size: $fs-16;
+    color: #426696;
+
+    cursor: pointer;
+  }
+
+  &__text {
+    font-size: $fs-12 + 1;
+    color: $color-blue-1;
+    letter-spacing: 0.3px;
+  }
+
+  &__image {
+    max-width: 100px;
+    height: 100%;
+    object-fit: cover;
+
+    border-radius: 10px;
+  }
+
+  &__spinner {
+    width: 50px;
+    height: 50px;
+
+    margin: 100px 0;
+    border-radius: 50%;
+    background: conic-gradient(#0000 10%, $color-green-1);
+
+    -webkit-mask: radial-gradient(farthest-side, #0000 calc(100% - 8px), rgb(110, 109, 109) 0);
+    animation: s3 1s infinite linear;
+
+    position: relative;
+    top: 50%;
+    left: 45%;
+  }
+}
+
+@keyframes s3 {
+  to {
+    transform: rotate(1turn);
+  }
+}

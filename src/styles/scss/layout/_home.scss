@@ -1,0 +1,18 @@
+.home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 80%;
+    width: 100%;
+
+    &__text {
+        @include styleText($color-blue-4, $fs-35 + 10, $fw-700);
+        letter-spacing: 1px;
+        text-align: center;
+        text-shadow: 1.5px 2px $color-blue-1;
+        line-height: 1.6;
+
+        width: 700px;
+    }
+}

@@ -1,0 +1,24 @@
+//Start variable, next mixin -->
+//Helper
+
+@import "abstracts/variable";
+@import "abstracts/mixin";
+
+//Base
+
+@import "base/normalized";
+@import "base/reset"; 
+@import "base/customizes";
+
+//Component
+// @import "Component/button";
+@import "components/signin";
+@import "components/cheader";
+@import "components/notfound";
+@import "components/tableUser";
+@import "components/tableMovie";
+@import "components/tableShowtime";
+
+//Layout
+@import "layout/sign";
+@import "layout/home";
