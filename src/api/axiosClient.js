@@ -9,6 +9,7 @@ const axiosClient = axios.create({
   //Header use insert token in order to authentication role
   headers: {
     "content-type": "application/json",
+    "Access-Control-Allow-Origin" : "*",
   },
   //paramsSerializer no use query string, will use paramsSerializer default of axios
   paramsSerializer: (params) => queryString.stringify(params),

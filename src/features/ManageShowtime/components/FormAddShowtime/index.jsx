@@ -134,8 +134,8 @@ function FormAddShowtime(props) {
           extra="3 loại giá vé: Thường, Vip, Deluxe"
         >
           <Radio.Group>
-            <Radio value="55000">55.000</Radio>
             <Radio value="75000">75.000</Radio>
+            <Radio value="90000">90.000</Radio>
             <Radio value="150000">150.000</Radio>
           </Radio.Group>
         </Form.Item>

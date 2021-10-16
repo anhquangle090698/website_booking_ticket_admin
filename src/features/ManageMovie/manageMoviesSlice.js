@@ -7,12 +7,12 @@ const initialManageMovie = {
   listMovie: [],
 
   informationMovie: {},
-  
+
   informationShowtime: {},
 
   isPendingListMovie: false,
   isPendingInformationMovie: false,
-  isPendingInformationShowtime : false,
+  isPendingInformationShowtime: false,
 };
 
 //Action get list movie
@@ -54,7 +54,7 @@ export const postAddMovieAsync = createAsyncThunk(
   async (formData, thunkAPI) => {
     const response = await manageMovieApi.postAddMovie(formData);
 
-    // thunkAPI.dispatch(await getListMovieAsync());
+    thunkAPI.dispatch(await getListMovieAsync());
     // thunkAPI.dispatch(await getInformationMovieAsync(formData.get('maPhim')))
 
     return response;

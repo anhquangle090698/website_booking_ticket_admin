@@ -1,6 +1,7 @@
 import { ACCESS_TOKEN_ADMIN } from 'utils/config';
 import axiosClient from './axiosClient';
 
+//Api use get information and update information admin
 const AdminApi = {
   //Api get information admin by account name return data (array)
   //Need param (string) account name

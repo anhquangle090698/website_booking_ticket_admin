@@ -30,7 +30,10 @@ function TableUser(props) {
   const dispatch = useDispatch();
 
   const listUser = useSelector((state) => state.manageUser.listUser);
-  const isPending = useSelector((state) => state.manageUser.isPending);
+  const isPendingListUser = useSelector((state) => state.manageUser.isPending);
+  const isPendingInformationUser = useSelector(
+    (state) => state.manageUser.isPendingInformationUser
+  );
 
   useEffect(() => {
     const getAllUser = async () => {
@@ -143,7 +146,7 @@ function TableUser(props) {
   //   pagination={{ pageSize: 50 }} scroll={{ y: 700 }} fixed header
   return (
     <>
-      {isPending ? (
+      {isPendingListUser ? (
         <div className="table-user__spinner"></div>
       ) : (
         <Table columns={columns} dataSource={listUser} rowKey={(e) => e.taiKhoan} bordered />
@@ -157,7 +160,11 @@ function TableUser(props) {
         centered
         width={800}
       >
-        <FormEditUser></FormEditUser>
+        {isPendingInformationUser ? (
+          <div className="table-user__spinner"></div>
+        ) : (
+          <FormEditUser></FormEditUser>
+        )}
       </Modal>
     </>
   );

@@ -8,10 +8,10 @@ import manageUserReducer from 'features/ManageUser/manageUserSlice';
 //Root reducer where contain all reducer of app, when create new reducer need sign up with root reducer.
 const rootReducer = {
   login: loginReducer, //loginSlice
-  admin: adminReducer,
-  manageUser : manageUserReducer,
-  manageMovie : manageMovieReducer,
-  manageShowtime : manageShowtimeReducer
+  admin: adminReducer, //adminSlice
+  manageUser : manageUserReducer, //manageUserSlice
+  manageMovie : manageMovieReducer, //manageMovieSlice
+  manageShowtime : manageShowtimeReducer, //manageShowtimeSlice
 };
 
 //configureStore is provided by Redux toolkit

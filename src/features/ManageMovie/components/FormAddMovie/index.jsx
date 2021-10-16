@@ -25,7 +25,7 @@ function FormAddMovie(props) {
       idGroup: 'GP03',
       rate: 5,
     });
-  }, []);
+  });
 
   const onFinish = async (values) => {
     const formatNgayKhoiChieu = moment(values.datetime).format('DD/MM/YYYY');

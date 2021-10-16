@@ -11,7 +11,8 @@ const initialManageUser = {
   informationSearchUser: [],
 
   isCheckAdd: '',
-  isPending: false,
+  isPendingListUser: false,
+  isPendingInformationUser: false,
 };
 
 //Action get all user
@@ -96,14 +97,18 @@ export const manageUserSlice = createSlice({
   reducers: {},
   extraReducers: (builder) => {
     builder.addCase(getAllUserAsync.pending, (state, action) => {
-      state.isPending = true;
+      state.isPendingListUser = true;
     });
     builder.addCase(getAllUserAsync.fulfilled, (state, action) => {
       state.listUser = action.payload;
-      state.isPending = false;
+      state.isPendingListUser = false;
+    });
+    builder.addCase(getSearchUserAsync.pending, (state, action) => {
+      state.isPendingInformationUser = true;
     });
     builder.addCase(getSearchUserAsync.fulfilled, (state, action) => {
       state.informationSearchUser = action.payload;
+      state.isPendingInformationUser = false;
     });
     builder.addCase(postAddUserAsync.fulfilled, (state, action) => {
       state.isCheckAdd = '';

@@ -33,7 +33,7 @@ function FormEditUser(props) {
       idGroup: 'GP03',
       password: information[0]?.matKhau,
     });
-  }, []);
+  }, [information]);
 
   const onCheckboxChange = (e) => {
     setCheckShowPassword(e.target.checked);
